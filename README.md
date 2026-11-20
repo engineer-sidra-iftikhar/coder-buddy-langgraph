@@ -1,3 +1,22 @@
+**Assignment 2 – Artificial Intelligence, FJWU**
+
+Submitted by: Sidra Iftikhar | Instructor: Dr. Irum Matloob
+
+> This project is based on the tutorial by **codebasics**:
+> ["Agentic AI Project in LangGraph | Build Lovable Clone"](https://youtu.be/SP-b_G74Nuk)
+
+### My changes
+- Created the virtual environment with Python 3.12 (using `uv`) because Python 3.14 caused compatibility problems
+- Fixed the import in `agent/graph.py`: `langchain.globals` → `langchain_core.globals`
+- Fixed the generated calculator: removed `export { Calculator };` from `script.js` so the buttons work
+
+### Result
+Prompt: *"Create a simple calculator web application"*
+
+The Planner, Architect and Coder agents generated a working calculator (`index.html`, `script.js`, `style.css`). Tested with 7 × 6 = 42.
+
+---
+
 # 🛠️ Coder Buddy
 
 **Coder Buddy** is an AI-powered coding assistant built with [LangGraph](https://github.com/langchain-ai/langgraph).  
