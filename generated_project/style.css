@@ -1,0 +1,125 @@
+/* Root variables for colors, font sizes, and spacing */
+:root {
+    /* Colors */
+    --color-bg: #f0f2f5;               /* Page background */
+    --color-calculator-bg: #ffffff;   /* Calculator container */
+    --color-key-bg: #e0e0e0;           /* Regular keys */
+    --color-key-hover: #d0d0d0;        /* Regular key hover */
+    --color-operator-bg: #ff9500;      /* Operator keys */
+    --color-operator-hover: #e08900;   /* Operator hover */
+    --color-control-bg: #c0c0c0;       /* Control keys (C, ←) */
+    --color-control-hover: #a0a0a0;    /* Control hover */
+    --color-display-bg: #222222;       /* Display background */
+    --color-display-text: #ffffff;    /* Display text */
+
+    /* Sizing */
+    --font-size-base: 1rem;
+    --spacing: 0.5rem;
+}
+
+/* Global page styling */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: var(--font-size-base);
+}
+
+/* Calculator container */
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background: var(--color-calculator-bg);
+    padding: var(--spacing);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: var(--spacing);
+}
+
+/* Display */
+#display {
+    font-size: 2.5rem;
+    background: var(--color-display-bg);
+    color: var(--color-display-text);
+    padding: var(--spacing);
+    text-align: right;
+    border-radius: 5px;
+    overflow: hidden;
+    word-break: keep-all;
+}
+
+/* Keys grid */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing);
+}
+
+/* Individual key styling */
+.key {
+    background: var(--color-key-bg);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: var(--spacing);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    user-select: none;
+}
+
+.key:hover {
+    background: var(--color-key-hover);
+}
+
+.key:active {
+    transform: scale(0.97);
+}
+
+/* Operator specific styling */
+.operator {
+    background: var(--color-operator-bg);
+    color: #fff;
+}
+
+.operator:hover {
+    background: var(--color-operator-hover);
+}
+
+/* Control specific styling */
+.control {
+    background: var(--color-control-bg);
+}
+
+.control:hover {
+    background: var(--color-control-hover);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .calculator {
+        width: 100vw;
+        max-width: none;
+        border-radius: 0;
+        padding: var(--spacing);
+    }
+
+    #display {
+        font-size: 2rem;
+    }
+
+    .key {
+        font-size: 1rem;
+        height: 50px;
+    }
+}

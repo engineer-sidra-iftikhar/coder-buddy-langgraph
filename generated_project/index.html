@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="calculator" id="calculator">
+        <div class="display" id="display">0</div>
+        <div class="keys">
+            <!-- Row 1 -->
+            <button class="key control" data-key="C">C</button>
+            <button class="key control" data-key="←">←</button>
+            <button class="key operator" data-key="/">/</button>
+            <button class="key operator" data-key="*">*</button>
+            <!-- Row 2 -->
+            <button class="key" data-key="7">7</button>
+            <button class="key" data-key="8">8</button>
+            <button class="key" data-key="9">9</button>
+            <button class="key operator" data-key="-">-</button>
+            <!-- Row 3 -->
+            <button class="key" data-key="4">4</button>
+            <button class="key" data-key="5">5</button>
+            <button class="key" data-key="6">6</button>
+            <button class="key operator" data-key="+">+</button>
+            <!-- Row 4 -->
+            <button class="key" data-key="1">1</button>
+            <button class="key" data-key="2">2</button>
+            <button class="key" data-key="3">3</button>
+            <button class="key operator" data-key="=">=</button>
+            <!-- Row 5 -->
+            <button class="key" data-key="0" style="grid-column: span 2;">0</button>
+            <button class="key" data-key=".">.</button>
+        </div>
+    </div>
+</body>
+</html>
